@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    background: #1e272e;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.entradaTexto{
+    padding: 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #2ecc71;
+    background-color: #34495e;
+    color: white;
+    outline: none;
+}
+
+.entradaTexto{
+    transition: 0.3s;
+}
+
+.entradaTexto:focus{
+    border-color: green;
+    transform: scale(1.1);
+}
+
+h1{
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #ecf0f1;
+}
+
+#logoEmpresa{
+    width: 150px;
+    margin:0 auto 20px;
+}
+
+h2{
+    color: rgb(99, 110, 114);
+}
+
+#formularioInicio{
+    background-color: #2c3e50;
+    width: 350px;
+    padding: 30px;
+
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+.colorBtn{
+    background-color: rgb(46, 204, 113);
+}
+
+.nombres{
+    color: rgb(99, 110, 114);
+}
+
+#btnIngresar{
+    padding:14px;
+    border: none;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+#btnIngresar:hover{
+    background: #27ae60;
+}
+
+#mensaje {
+    text-align: center;
+    color: #e74c3c; 
+    margin-top: 10px;
+    font-weight: bold;
+    width: 100%; 
+}
+
+#mantenimiento {
+    background-color: #2c3e50; 
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    max-width: 400px;
+}
+
+a{
+    color: #ecf0f1;
+}
