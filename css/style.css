@@ -4,15 +4,18 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial;
     background: #1e272e;
-
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
+    min-height: 100vh; 
+    
     flex-direction: column;
+    
+    padding: 20px; 
 }
 
 .entradaTexto{
@@ -73,6 +76,7 @@ h2{
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 #btnIngresar:hover{
@@ -81,19 +85,31 @@ h2{
 
 #mensaje {
     text-align: center;
-    color: #e74c3c; 
+    /*color: #e74c3c; */
     margin-top: 10px;
     font-weight: bold;
     width: 100%; 
 }
 
-#mantenimiento {
+
+#formularioRegistro {
     background-color: #2c3e50; 
     padding: 40px;
     border-radius: 20px;
-    text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-    max-width: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formularioRegistro #btnIngresar {
+    margin-top: 20px;
+}
+
+#contenedorInputs {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
 }
 
 a{
@@ -107,4 +123,10 @@ a{
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
+}
+
+#btnIngresar:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
 }
