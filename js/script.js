@@ -1,20 +1,32 @@
-function login(){
+async function login(){
 
     let divMensaje = document.querySelector('#mensaje');
     
     let usuario = document.querySelectorAll('.entradaTexto')[0].value;
     let contra = document.querySelectorAll('.entradaTexto')[1].value;
 
-    if(usuario === "admin" && contra === "123"){
+    const { data, error } = await db
+        .from('trabajadores')
+        .select('*')
+        .eq('email', usuario)
+        .eq('password', contra);
 
-        localStorage.setItem("usuario", usuario);
+    if (error) {
+        divMensaje.innerHTML = error.message;
+        divMensaje.style.color = "darkred";
+        return;
+    }
 
-        window.location.href = "./pages/principal.html";
-
-    }else{
-
+    if (data.length > 0) {
+        localStorage.setItem("usuario", data[0].nombres);
+        divMensaje.innerHTML = "Login correcto";
+        divMensaje.style.color = "green";
+        setTimeout(() => {
+            window.location.href = "./pages/principal.html";
+        }, 2000);
+    } else {
         divMensaje.innerHTML = "Credenciales incorrectas";
-
+        divMensaje.style.color = "#e74c3c";
     }
 }
 

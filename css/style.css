@@ -76,6 +76,7 @@ h2{
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 #btnIngresar:hover{
@@ -84,7 +85,7 @@ h2{
 
 #mensaje {
     text-align: center;
-    color: #e74c3c; 
+    /*color: #e74c3c; */
     margin-top: 10px;
     font-weight: bold;
     width: 100%; 
@@ -122,4 +123,10 @@ a{
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 10px;
+}
+
+#btnIngresar:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
 }

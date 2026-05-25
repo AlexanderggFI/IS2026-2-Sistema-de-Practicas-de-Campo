@@ -25,6 +25,8 @@ campos.forEach((campo) => {
 });
 
 document.getElementById('btnIngresar').addEventListener('click', async () => {
+    const botonRegistrar = document.getElementById('btnIngresar');
+
     const nombres = document.getElementById('nombres').value;
     const apellidoP = document.getElementById('apellidoP').value;
     const apellidoM = document.getElementById('apellidoM').value;
@@ -32,15 +34,21 @@ document.getElementById('btnIngresar').addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const { data, error } = await db
-    .from('trabajadores')
+    botonRegistrar.disabled = true;
+    botonRegistrar.textContent = "Registrando...";
+
+    const {data, error} = await db
+    .from("trabajadores")
     .insert([
         {nombres, apellidoP, apellidoM, numTrabajador, email, password}
     ]);
 
     if (error) {
-        alert('Error al registrar: ' + error.message);
+        alert("Error al registrar: ");
+        botonRegistrar.disabled = false;
+        botonRegistrar.textContent = "Registrar";
     } else {
-        alert('Registro exitoso');
+        alert("Registro exitoso");
+        window.location.href = "../index.html";
     }   
 });
