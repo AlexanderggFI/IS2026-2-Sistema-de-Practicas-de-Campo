@@ -1,12 +1,12 @@
 Credenciales de prueba
 
-[Trabajador]
+[Trabajador -> Profesor]
 
-- Correo: carlosalberto@gmail.com
-- Contraseña: carlosalberto
+- Correo: hormigaglez@gmail.com
+- Contraseña: armandoalba
 
-- Correo: yaelh7429@gmail.com
-- Contraseña: yaelin29
+- Correo: hdzmoreno@gmail.com
+- Contraseña: luismorita
 
-- Correo: adahir.hm@gmail.com
-- Contraseña: misaelFI117
+- Correo: juanmanu@gmail.com
+- Contraseña: juanmanuelpuebla
