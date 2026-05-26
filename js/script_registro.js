@@ -1,10 +1,10 @@
 const campos = [
-    { name: 'nombres', label: 'Nombre(s)', type: 'text' },
-    { name: 'apellidoP', label: 'Apellido Paterno', type: 'text' },
-    { name: 'apellidoM', label: 'Apellido Materno', type: 'text' },
-    { name: 'numTrabajador', label: 'Número de Trabajador', type: 'number' },
-    { name: 'email', label: 'Correo Electrónico', type: 'email' },
-    { name: 'password', label: 'Contraseña', type: 'password' }
+    { name: 'nombres', label: 'Nombre(s)', type: 'text', placeholder: 'ej. Carlos Alberto' },
+    { name: 'apellidoP', label: 'Apellido Paterno', type: 'text', placeholder: 'ej. González' },
+    { name: 'apellidoM', label: 'Apellido Materno', type: 'text', placeholder: 'ej. Rodríguez' },
+    { name: 'numTrabajador', label: 'Número de Trabajador', type: 'number', placeholder: 'ej. 324367035' },
+    { name: 'email', label: 'Correo Electrónico', type: 'email', placeholder: 'ej. carlosalberto@gmail.com' },
+    { name: 'password', label: 'Contraseña', type: 'password', placeholder: 'Mínimo 8 caracteres' }
 ];
 
 const contenedor = document.getElementById('contenedorInputsRegistro');
