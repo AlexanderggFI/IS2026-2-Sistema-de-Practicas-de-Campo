@@ -7,9 +7,13 @@ const campos = [
     { name: 'password', label: 'Contraseña', type: 'password' }
 ];
 
-const contenedor = document.getElementById('contenedorInputs');
+const contenedor = document.getElementById('contenedorInputsRegistro');
 
 campos.forEach((campo) => {
+
+    const divCampo = document.createElement('div');
+    divCampo.classList.add('campoRegistro');
+
     const label = document.createElement('label');
     label.textContent = campo.label;
 
@@ -17,11 +21,13 @@ campos.forEach((campo) => {
     input.type = campo.type;
     input.id = campo.name; 
     input.name = campo.name; 
-
-    input.classList.add('entradaTexto');
     
-    contenedor.appendChild(label);
-    contenedor.appendChild(input);
+    input.classList.add('entradaTexto');
+
+    divCampo.appendChild(label);
+    divCampo.appendChild(input);
+    
+    contenedor.appendChild(divCampo);
 });
 
 document.getElementById('btnIngresar').addEventListener('click', async () => {
