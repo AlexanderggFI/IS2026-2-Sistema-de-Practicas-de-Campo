@@ -1,7 +1,7 @@
 const { createClient } = supabase;
 
 const db = createClient(
-    'https://ecakuisrrlrvevneiglw.supabase.co',
-    'sb_publishable_GUDcpzZrj4GRt0uiACkUBA_8d0J8CHj'
+    'https://srhhoagquxtfcgkrbzdu.supabase.co',
+    'sb_publishable_s1imzCJNqbEAVWlYyHs6wA_DskMqDvq'
 );
     
