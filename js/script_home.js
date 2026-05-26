@@ -1,6 +1,10 @@
 const botonMenu = document.getElementById('btnBarras');
-const menuLateral = document.getElementById('menuLateral');
+const pantalla = document.getElementById('pantallaBienvenida');
+
+document.getElementById("nombrePerfil").innerHTML = usuario;
 
 botonMenu.addEventListener('click', () => {
-    menuLateral.classList.toggle('mostrar');
+    pantalla.classList.toggle('mostrar');
+    flag = true;
+    
 });
