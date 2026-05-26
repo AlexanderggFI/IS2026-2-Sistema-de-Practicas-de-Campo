@@ -21,6 +21,7 @@ campos.forEach((campo) => {
     input.type = campo.type;
     input.id = campo.name; 
     input.name = campo.name; 
+    input.placeholder = campo.placeholder;
     
     input.classList.add('entradaTexto');
 
@@ -50,7 +51,7 @@ document.getElementById('btnIngresar').addEventListener('click', async () => {
     ]);
 
     if (error) {
-        alert("Error al registrar: ");
+        alert("Error al registrar");
         botonRegistrar.disabled = false;
         botonRegistrar.textContent = "Registrar";
     } else {

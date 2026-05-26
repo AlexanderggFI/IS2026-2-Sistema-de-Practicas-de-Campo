@@ -23,7 +23,7 @@ async function login(){
         divMensaje.style.color = "green";
         setTimeout(() => {
             window.location.href = "./pages/principal.html";
-        }, 2000);
+        }, 500);
     } else {
         divMensaje.innerHTML = "Credenciales incorrectas";
         divMensaje.style.color = "#e74c3c";
