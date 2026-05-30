@@ -1,15 +1,19 @@
 const campos = [
-    { name: 'nombres', label: 'Nombre(s)', type: 'text' },
-    { name: 'apellidoP', label: 'Apellido Paterno', type: 'text' },
-    { name: 'apellidoM', label: 'Apellido Materno', type: 'text' },
-    { name: 'numTrabajador', label: 'Número de Trabajador', type: 'number' },
-    { name: 'email', label: 'Correo Electrónico', type: 'email' },
-    { name: 'password', label: 'Contraseña', type: 'password' }
+    { name: 'nombres', label: 'Nombre(s)', type: 'text', placeholder: 'ej. Carlos Alberto' },
+    { name: 'apellidoP', label: 'Apellido Paterno', type: 'text', placeholder: 'ej. González' },
+    { name: 'apellidoM', label: 'Apellido Materno', type: 'text', placeholder: 'ej. Rodríguez' },
+    { name: 'numTrabajador', label: 'Número de Trabajador', type: 'number', placeholder: 'ej. 324367035' },
+    { name: 'email', label: 'Correo Electrónico', type: 'email', placeholder: 'ej. carlosalberto@gmail.com' },
+    { name: 'password', label: 'Contraseña', type: 'password', placeholder: 'Mínimo 8 caracteres' }
 ];
 
-const contenedor = document.getElementById('contenedorInputs');
+const contenedor = document.getElementById('contenedorInputsRegistro');
 
 campos.forEach((campo) => {
+
+    const divCampo = document.createElement('div');
+    divCampo.classList.add('campoRegistro');
+
     const label = document.createElement('label');
     label.textContent = campo.label;
 
@@ -17,11 +21,14 @@ campos.forEach((campo) => {
     input.type = campo.type;
     input.id = campo.name; 
     input.name = campo.name; 
-
-    input.classList.add('entradaTexto');
+    input.placeholder = campo.placeholder;
     
-    contenedor.appendChild(label);
-    contenedor.appendChild(input);
+    input.classList.add('entradaTexto');
+
+    divCampo.appendChild(label);
+    divCampo.appendChild(input);
+    
+    contenedor.appendChild(divCampo);
 });
 
 document.getElementById('btnIngresar').addEventListener('click', async () => {
@@ -44,7 +51,7 @@ document.getElementById('btnIngresar').addEventListener('click', async () => {
     ]);
 
     if (error) {
-        alert("Error al registrar: ");
+        alert("Error al registrar");
         botonRegistrar.disabled = false;
         botonRegistrar.textContent = "Registrar";
     } else {
