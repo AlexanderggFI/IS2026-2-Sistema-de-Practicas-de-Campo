@@ -44,18 +44,31 @@ document.getElementById('btnIngresar').addEventListener('click', async () => {
     botonRegistrar.disabled = true;
     botonRegistrar.textContent = "Registrando...";
 
-    const {data, error} = await db
-    .from("trabajadores")
-    .insert([
-        {nombres, apellidoP, apellidoM, numTrabajador, email, password}
-    ]);
+    setTimeout(async () => {
+        
+        if (password.length < 8) {
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            botonRegistrar.disabled = false;
+            botonRegistrar.textContent = "Registrar";
+            return; 
+        }
 
-    if (error) {
-        alert("Error al registrar");
-        botonRegistrar.disabled = false;
-        botonRegistrar.textContent = "Registrar";
-    } else {
-        alert("Registro exitoso");
-        window.location.href = "../index.html";
-    }   
+        const {data, error} = await db
+        .from("trabajadores")
+        .insert([
+            {nombres, apellidoP, apellidoM, numTrabajador, email, password}
+        ]);
+
+        if (error) {
+            alert("Error al registrar: " + error.message);
+            botonRegistrar.disabled = false;
+            botonRegistrar.textContent = "Registrar";
+        } else {
+            alert("Registro exitoso");
+            window.location.href = "../index.html";
+        }   
+
+    }, 1000); 
 });
+
+  

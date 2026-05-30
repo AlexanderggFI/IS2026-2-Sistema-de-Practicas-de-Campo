@@ -46,7 +46,7 @@ label{
 }
 
 #logoEmpresa{
-    width: 150px;
+    width: 250px;
     margin:0 auto 20px;
 }
 
@@ -57,8 +57,7 @@ h2{
 #formularioInicio{
     background-color: #2c3e50;
     width: 350px;
-    padding: 30px;
-
+    padding: 10px 30px 30px 30px;
     border-radius: 30px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -84,6 +83,19 @@ h2{
     background: #27ae60;
 }
 
+#btnRegistrar{
+    padding:14px;
+    border: none;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#btnRegistrar:hover{
+    background: #27ae60;
+}
 
 #formularioInicio #mensaje {
     display: flex;
@@ -317,4 +329,21 @@ a{
     margin-left: 250px;         
     width: calc(100% - 250px);  
     padding-left: 40px;        
+}
+
+.textoRedireccion {
+    align-self: center;
+    color: #ecf0f1;   
+    margin-top: 20px;
+}
+
+.textoRedireccion a {
+    color: #2ecc71;   
+    margin-top: 0;   
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.textoRedireccion a:hover {
+    color: #27ae60;    
 }
