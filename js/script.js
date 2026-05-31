@@ -32,3 +32,8 @@ async function login(){
 
 const btnIngresar = document.getElementById('btnIngresar');
 btnIngresar.addEventListener("click", login);
+
+const btnRegistrar = document.getElementById('btnRegistrar');
+btnRegistrar.addEventListener("click", () => {
+    window.location.href = "./pages/registro.html";
+});
